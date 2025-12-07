@@ -3,8 +3,10 @@ import { useState } from "react";
 import FlappyBlock from "./FlappyBlock";
 import GameTwo from "./GameTwo";
 
+type GameType = "flappy" | "f1" | "comingSoon" | null;
+
 export default function AboutPage() {
-  const [selectedGame, setSelectedGame] = useState<"flappy" | "f1" | "comingSoon" | null>(null);
+  const [selectedGame, setSelectedGame] = useState<GameType>(null);
 
   return (
     <section className="container py-5">
@@ -60,19 +62,9 @@ export default function AboutPage() {
               ) : selectedGame === "f1" ? (
                 <GameTwo />
               ) : selectedGame === "comingSoon" ? (
-                <div
-                  className="d-flex align-items-center justify-content-center bg-light border rounded shadow-sm"
-                  style={{ width: "400px", height: "300px" }}
-                >
-                  <p className="text-muted">Coming Soon</p>
-                </div>
+                <GameWindow>Coming Soon</GameWindow>
               ) : (
-                <div
-                  className="d-flex align-items-center justify-content-center bg-white border rounded shadow-sm"
-                  style={{ width: "400px", height: "300px" }}
-                >
-                  <p className="text-muted">Select a game from above</p>
-                </div>
+                <GameWindow>Select a game from above</GameWindow>
               )}
             </div>
           </div>
@@ -105,5 +97,17 @@ export default function AboutPage() {
         </div>
       </div>
     </section>
+  );
+}
+
+// Reusable GameWindow component
+function GameWindow({ children }: { children: React.ReactNode }) {
+  return (
+    <div
+      className="d-flex align-items-center justify-content-center bg-white border rounded shadow-sm"
+      style={{ width: "400px", height: "300px" }}
+    >
+      <p className="text-muted text-center">{children}</p>
+    </div>
   );
 }

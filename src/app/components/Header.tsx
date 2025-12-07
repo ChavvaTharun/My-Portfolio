@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
 import { Home, User, Folder, Mail, Menu } from "lucide-react"; // lightweight icon pack
 
 export default function Header() {

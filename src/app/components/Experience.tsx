@@ -104,7 +104,7 @@ function Experience() {
               </span>
               <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
               <p className="text-blue-300 mb-1 font-medium">{exp.company}</p>
-              <p className="text-gray-300 mb-3 italic">{exp.project}</p>
+              <p className="text-gray-300 mb-3 italic">{exp.projects.join(", ")}</p>
               <ul className="list-disc list-outside text-gray-300 text-sm space-y-1">
                 {exp.details.map((item, i) => (
                   <li key={i}>{item}</li>
