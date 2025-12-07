@@ -45,7 +45,7 @@ export default function Banner() {
         <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
           {/* IMAGE */}
-          <div className="flex justify-center lg:justify-start">
+          <div className="flex justify-center lg:justify-start banner-img">
             <div className="relative w-[260px] h-[260px] mx-auto perspective-1000 group">
 
               <div
@@ -89,7 +89,7 @@ export default function Banner() {
               web technologies.
             </p>
 
-            <div className="flex gap-4 mt-8">
+            <div className="flex gap-4 mt-8 banner-img">
               <button
                 className="px-6 py-3 bg-yellow-300 text-black font-semibold rounded-xl shadow-md hover:shadow-yellow-400/40 hover:-translate-y-1 transition"
                 onClick={() =>
