@@ -36,29 +36,32 @@ function Education() {
                     </div>
 
                     {/* Education List */}
-                    <div className="flex flex-wrap gap-6">
+                    <div className="row">
                         {educationData.map((edu, index) => (
                             <div
                                 key={index}
-                                className="w-full md:w-[48%] bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-6 ftco-animate transition-transform duration-300 hover:scale-105"
+                                className="col-lg-6 col-md-12 mb-4"   // <-- BOOTSTRAP CLASS ADDED
                             >
-                                <span className="text-blue-400 text-lg font-semibold">
-                                    {edu.year}
-                                </span>
-                                <h2 className="text-2xl font-bold text-white mt-1">
-                                    {edu.degree}
-                                </h2>
-                                <span className="block text-gray-300 mt-1 text-sm">
-                                    {edu.institution}
-                                </span>
+                                <div className="w-full bg-white/10 backdrop-blur-md rounded-xl shadow-lg p-6 ftco-animate transition-transform duration-300 hover:scale-105">
+                                    <span className="text-blue-400 text-lg font-semibold">
+                                        {edu.year}
+                                    </span>
+                                    <h2 className="text-2xl font-bold text-white mt-1">
+                                        {edu.degree}
+                                    </h2>
+                                    <span className="block text-gray-300 mt-1 text-sm">
+                                        {edu.institution}
+                                    </span>
+                                </div>
                             </div>
                         ))}
                     </div>
 
+
                     {/* Download CV Button */}
                     <div className="text-center mt-10">
                         <a
-                            href="#"
+                            href="/chavva-tharun.pdf"
                             download
                             className="inline-block text-white font-semibold py-3 px-6 rounded-lg transition"
                         >

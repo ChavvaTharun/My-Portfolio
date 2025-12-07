@@ -93,7 +93,7 @@ function Experience() {
         </div>
 
         {/* Experience List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 grid-cols-1 md:grid-cols-1 gap-8">
           {experienceData.map((exp, index) => (
             <div
               key={index}

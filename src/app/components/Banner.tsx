@@ -74,7 +74,7 @@ export default function Banner() {
           </div>
 
           {/* TEXT SECTION */}
-          <div>
+          <div className="banner-left">
             <h1 className="text-5xl md:text-6xl font-extrabold tracking-wide text-white drop-shadow-lg mb-4">
               {displayed}
               <span className="text-cyan-300">|</span>

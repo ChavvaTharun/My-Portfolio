@@ -59,7 +59,7 @@ function Contact() {
         <div className="row align-items-center about-section">
 
           {/* Left side video */}
-          <div className="col-md-6 text-center">
+          <div className="col-lg-6 col-md-12 text-center">
             <video
               src="videos/contact-video.mp4"
               autoPlay
@@ -73,7 +73,8 @@ function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="col-md-6">
+          <div className="col-lg-6 col-md-12">
+            <div className="contact-form">
             <h2 className="mb-4">Contact Me</h2>
 
             <form onSubmit={handleSubmit} className="contact-form">
@@ -132,6 +133,7 @@ function Contact() {
                 Send Message
               </button>
             </form>
+            </div>
           </div>
 
         </div>

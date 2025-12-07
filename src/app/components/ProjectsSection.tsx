@@ -65,7 +65,7 @@ const ProjectsSection: React.FC = () => {
                 </div>
 
                 {/* Projects Grid */}
-                <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-10 justify-center">
+                <div className="grid xl:grid-cols-3  lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-10 justify-center">
                     {projects.map((project, index) => (
                         <div key={index} className="ftco-animate">
                             <div className="project-card overflow-hidden duration-300">

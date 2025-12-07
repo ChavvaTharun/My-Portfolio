@@ -6,7 +6,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="hed fixed top-0 left-0 z-50">
+    <header className="hed fixed top-0 left-0 z-50 side-header">
       {/* Sidebar */}
       <nav
         className={`nav-bar text-white h-screen flex flex-col justify-between items-start p-4 transition-all duration-500 ease-in-out shadow-lg ${

@@ -5,7 +5,7 @@
   --black: #000;
   --lightblue: #0051ff;
   --footer-back: #212529;
-  --light-grey:rgba(255, 255, 255, 0.1);
+  --light-grey: rgba(255, 255, 255, 0.1);
 }
 
 @theme inline {
@@ -40,10 +40,10 @@ body {
 nav {
   position: fixed;
   left: 10px;
-  top: 20%;
+  top: 15vh;
   height: fit-content;
   width: fit-content;
-  color: white;
+  color: #000;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -60,25 +60,30 @@ nav a {
 }
 
 nav a:hover {
-  color: #9ca3af; /* gray hover */
+  color: #9ca3af;
+  /* gray hover */
+}
+
+
+.nav-resp a {
+  color: #000;
 }
 
 /* ============== sub-header ================ */
 
-.chavva_logo_main{
+.chavva_logo_main {
   background-color: transparent;
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
   margin: 10px 0px;
   border-radius: 10px;
 }
 
-.chavva_logo_main img{
+.chavva_logo_main img {
   fill: var(--white);
   filter: brightness(0) invert(1);
-  padding-left: 25px;
 }
 
-.sub-left-header{
+.sub-left-header {
   height: 100%;
   display: flex;
   justify-content: end;
@@ -99,7 +104,7 @@ nav a:hover {
 }
 
 
-.banner-main{
+.banner-main {
   padding: 50px 0px;
   margin: 80px 0px 10px;
   background-color: transparent;
@@ -109,9 +114,17 @@ nav a:hover {
 
 /* Blinking cursor */
 @keyframes blink {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
 }
+
 .blinking-cursor {
   animation: blink 1s infinite;
   color: #fef3c7;
@@ -119,18 +132,34 @@ nav a:hover {
 
 /* Floating effect */
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
+
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
 
 /* Wave background */
 @keyframes wave {
-  0%, 100% { transform: scale(1) rotate(0deg); }
-  50% { transform: scale(1.02) rotate(0.5deg); }
+
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    transform: scale(1.02) rotate(0.5deg);
+  }
 }
+
 .animate-wave {
   animation: wave 14s ease-in-out infinite;
 }
@@ -156,6 +185,7 @@ nav a:hover {
   border: none;
   transition: all 0.3s ease;
 }
+
 .btn-cyan:hover {
   box-shadow: 0 0 25px rgba(255, 230, 160, 0.6);
   transform: translateY(-2px);
@@ -166,6 +196,7 @@ nav a:hover {
   color: #fde7a7;
   transition: all 0.3s ease;
 }
+
 .btn-outline-cyan:hover {
   background-color: rgba(255, 248, 220, 0.1);
   box-shadow: 0 0 20px rgba(255, 248, 200, 0.5);
@@ -174,7 +205,7 @@ nav a:hover {
 
 /* ================== about-section  ============== */
 
-.about-section{
+.about-section {
   margin: 0px auto;
   background-color: transparent;
   box-shadow: 0 4px 20px rgba(255, 255, 255, 0.4);
@@ -182,8 +213,8 @@ nav a:hover {
   color: var(--white);
 }
 
-.right-side-about-section ul li{
- list-style:circle;
+.right-side-about-section ul li {
+  list-style: circle;
 }
 
 /* ================================================ */
@@ -191,10 +222,11 @@ nav a:hover {
 .animated-names-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* space between the two names */
+  gap: 1rem;
+  /* space between the two names */
 }
 
-.animated-names-container h1{
+.animated-names-container h1 {
   color: var(--white);
 }
 
@@ -202,14 +234,16 @@ nav a:hover {
   display: flex;
   font-size: 4rem;
   font-weight: bold;
-  color: #62cff4; /* theme color */
+  color: #62cff4;
+  /* theme color */
 }
 
 .animated-name span {
   opacity: 0;
   transform: translateY(-20px);
   animation: fadeIn 0.5s forwards;
-  animation-delay: calc(var(--i) * 0.3s); /* stagger each letter */
+  animation-delay: calc(var(--i) * 0.3s);
+  /* stagger each letter */
 }
 
 @keyframes fadeIn {
@@ -221,7 +255,7 @@ nav a:hover {
 
 /* ======================= About  ================== */
 
-.about-section{
+.about-section {
   padding: 30px 30px;
 }
 
@@ -257,6 +291,7 @@ nav a:hover {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -270,12 +305,17 @@ nav a:hover {
 
 /* ========================= exprience ================== */
 
-.experience-section-main{
-    background-image: url("/images/home-images/background-image2.png"); /* path inside public/images */
-  background-size: cover;       /* make it cover entire section */
-  background-position: center;  /* center the image */
-  background-repeat: no-repeat; /* avoid repeating */
-  background-attachment: fixed; /* parallax-like scroll effect (optional) */
+.experience-section-main {
+  background-image: url("/images/home-images/background-image2.png");
+  /* path inside public/images */
+  background-size: cover;
+  /* make it cover entire section */
+  background-position: center;
+  /* center the image */
+  background-repeat: no-repeat;
+  /* avoid repeating */
+  background-attachment: fixed;
+  /* parallax-like scroll effect (optional) */
   position: relative;
   z-index: 1;
   margin-top: 50px;
@@ -283,49 +323,54 @@ nav a:hover {
 
 /* ========================== education ==================== */
 
-.education-section-main{
-  background-image: url("/images/home-images/background-img.png"); /* path inside public/images */
-  background-size: cover;       /* make it cover entire section */
-  background-position: center;  /* center the image */
-  background-repeat: no-repeat; /* avoid repeating */
-  background-attachment: fixed; /* parallax-like scroll effect (optional) */
+.education-section-main {
+  background-image: url("/images/home-images/background-img.png");
+  /* path inside public/images */
+  background-size: cover;
+  /* make it cover entire section */
+  background-position: center;
+  /* center the image */
+  background-repeat: no-repeat;
+  /* avoid repeating */
+  background-attachment: fixed;
+  /* parallax-like scroll effect (optional) */
   position: relative;
   z-index: 1;
 }
 
-.education-section{
+.education-section {
   padding: 40px 0px;
   border-radius: 10px;
   background-color: transparent;
 }
 
-.education-section a{
+.education-section a {
   box-shadow: 0 1px 10px rgba(255, 255, 255, 0.2);
   text-decoration: none;
 }
 
-.education-section a:hover{
+.education-section a:hover {
   background: linear-gradient(135deg, #54d0d4, #071c47)
 }
 
 /* ======================== project section =========== */
 
-.project-section{
+.project-section {
   padding: 40px 0px;
   border-radius: 10px;
   background-color: transparent;
-  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.4); 
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.4);
 }
 
-.project-section-heading p{
+.project-section-heading p {
   color: var(--white);
 }
 
-.section-heading-text{
-    position: relative;
+.section-heading-text {
+  position: relative;
 }
 
-.section-heading-text span{
+.section-heading-text span {
   font-size: 90px;
   font-weight: 900;
   color: var(--light-grey);
@@ -333,30 +378,30 @@ nav a:hover {
   z-index: 1;
 }
 
-.section-heading-text h6{
+.section-heading-text h6 {
   color: var(--white);
   top: 38%;
   left: 40%;
   font-size: 35px;
   position: absolute;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   letter-spacing: 10px;
 }
 
-.project-card{
+.project-card {
   height: 450px;
   border-radius: 10px;
   background-color: transparent;
   box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
 }
 
-.project-description a{
- color: var(--white);
- text-decoration: none;
- font-size: 18px;
+.project-description a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 18px;
 }
 
-.project-description p{
+.project-description p {
   color: var(--white);
 }
 
@@ -373,7 +418,7 @@ nav a:hover {
   max-width: 100%;
   height: auto;
   border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .contact-form .form-control {
@@ -384,7 +429,7 @@ nav a:hover {
   transition: all 0.3s ease;
 }
 
-.contact-form .form-control::placeholder{
+.contact-form .form-control::placeholder {
   color: #fff;
 }
 
@@ -426,4 +471,70 @@ nav a:hover {
 
 .footer-background a:hover {
   color: var(--lightblue);
+}
+
+
+/* ====================== responsive ======================== */
+
+@media (max-width: 991px) {
+
+  /* ---------------- sider header ---------------- */
+  .side-header {
+    display: none;
+  }
+
+  .responsive-text {
+    font-size: 35px;
+  }
+
+  /* ---------------- banner ---------------- */
+  .banner-left {
+    padding-top: 30px;
+  }
+
+  .banner-left h1 {
+    text-align: center;
+  }
+
+  /* ---------------- about ---------------- */
+
+  .right-side-about-section {
+    padding-top: 60px;
+  }
+
+  .right-side-about-section h2 {
+    text-align: center;
+  }
+
+  /* ---------------- contact-us ---------------- */
+
+  .contact-form {
+    padding-top: 30px;
+  }
+
+}
+
+/* ---------- below 767 -------------- */
+
+@media (max-width: 767px) {
+
+  .section-heading-text span {
+    display: none;
+  }
+
+  .section-heading-text h6 {
+    position: static;
+    font-weight: 500;
+  }
+
+}
+
+/* ---------- below 480 -------------- */
+
+@media (max-width: 480px) {
+
+  ul {
+    padding-left: 0rem !important;
+  }
+
 }
