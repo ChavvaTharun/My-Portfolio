@@ -28,9 +28,9 @@ function Education() {
                     <div className="project-section-heading text-center mb-12">
                         <div className="section-heading-text">
                             <span className="uppercase tracking-wide mb-2">
-                                Eduction
+                                Education
                             </span>
-                            <h6 className="font-semibold mb-4">Eduction</h6>
+                            <h6 className="font-semibold mb-4">Education</h6>
                         </div>
 
                     </div>
